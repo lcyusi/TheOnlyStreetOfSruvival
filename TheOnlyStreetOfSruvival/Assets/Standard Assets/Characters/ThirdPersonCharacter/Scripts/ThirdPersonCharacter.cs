@@ -42,7 +42,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         /// <summary>
         /// 地面检查的距离
         /// </summary>
-        [SerializeField] float m_GroundCheckDistance = 0.1f;//地面检查的距离  
+        [SerializeField] float m_GroundCheckDistance = 0.3f;//地面检查的距离  
         /// <summary>
         /// 刚体
         /// </summary>
@@ -140,7 +140,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             //[Mathf.Atan2] :以弧度为单位计算并返回 y/x 的反正切值。返回值表示相对直角三角形对角的角，其中 x 是临边边长，而 y 是对边边长。
             //返回值为x轴和一个零点起始在(x,y)结束的2D向量的之间夹角。
             m_TurnAmount = Mathf.Atan2(move.x, move.z);//产生一个方位角，即与z轴的夹角，用于人物转向 
-            print("Mathf.Atan2(move.x, move.z)用于人物转向" + m_TurnAmount);
+            Debug.Log("Mathf.Atan2(move.x, move.z)用于人物转向" + m_TurnAmount);
 
 
             m_ForwardAmount = move.z;//人物前进的数值
